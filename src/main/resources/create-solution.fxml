@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.CreateSolutionController">
+   <children>
+      <VBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="20.0" layoutY="20.0" text="Nome">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="name" />
+            <Label text="Urgência">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <RadioButton fx:id="u1" mnemonicParsing="false" text="1">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </RadioButton>
+            <RadioButton fx:id="u2" mnemonicParsing="false" text="2">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </RadioButton>
+            <RadioButton fx:id="u3" mnemonicParsing="false" text="3">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </RadioButton>
+            <RadioButton fx:id="u4" mnemonicParsing="false" text="4">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </RadioButton>
+            <RadioButton fx:id="u5" mnemonicParsing="false" text="5">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </RadioButton>
+            <Label layoutX="20.0" layoutY="20.0" text="Descrição da solução">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </Label>
+            <TextArea fx:id="descriptionText" prefHeight="109.0" prefWidth="578.0" />
+            <Label layoutX="20.0" layoutY="192.0" text="Problemas perto">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER">
+               <children>
+                  <TableView fx:id="table" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS">
+                    <columns>
+                      <TableColumn fx:id="title" prefWidth="75.0" text="Titulo" />
+                      <TableColumn fx:id="description" prefWidth="75.0" text="Descrição" />
+                    </columns>
+                  </TableView>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="SOMETIMES">
+                     <children>
+                        <Button fx:id="add" mnemonicParsing="false" onAction="#onAddClick" text="&gt;" />
+                        <Button fx:id="remove" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onRemoveClick" text="&lt;" />
+                     </children>
+                  </VBox>
+                  <TableView fx:id="tableAdded" layoutX="10.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS">
+                     <columns>
+                        <TableColumn fx:id="titleAdded" prefWidth="75.0" text="Titulo" />
+                        <TableColumn fx:id="descriptionAdded" prefWidth="75.0" text="Descrição" />
+                     </columns>
+                  </TableView>
+               </children>
+            </HBox>
+            <AnchorPane>
+               <children>
+                  <Button fx:id="criar" alignment="BASELINE_RIGHT" mnemonicParsing="false" onAction="#onCriarClick" text="Criar" AnchorPane.rightAnchor="0.0" />
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </AnchorPane>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>

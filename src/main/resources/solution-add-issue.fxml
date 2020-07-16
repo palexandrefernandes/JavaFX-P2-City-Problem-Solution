@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxWidth="1.7976931348623157E308" prefHeight="449.0" prefWidth="618.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SolutionAddIssueController">
+   <children>
+      <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <TableView fx:id="table1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS">
+              <columns>
+                <TableColumn fx:id="id1" prefWidth="75.0" text="#" />
+                <TableColumn fx:id="title1" prefWidth="75.0" text="Titulo" />
+                  <TableColumn fx:id="description1" prefWidth="75.0" text="Descrição" />
+                  <TableColumn fx:id="date1" prefWidth="75.0" text="Data" />
+              </columns>
+            </TableView>
+            <VBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+               <children>
+                  <Button fx:id="add" mnemonicParsing="false" onAction="#onAddClick" text="&gt;" />
+                  <Button fx:id="remove" mnemonicParsing="false" onAction="#onRemoveClick" text="&lt;" />
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </VBox>
+            <TableView fx:id="table2" layoutX="10.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="271.0" HBox.hgrow="ALWAYS">
+               <columns>
+                  <TableColumn fx:id="id2" prefWidth="75.0" text="#" />
+                  <TableColumn fx:id="title2" prefWidth="75.0" text="Titulo" />
+                  <TableColumn fx:id="description2" prefWidth="75.0" text="Descrição" />
+                  <TableColumn fx:id="date2" prefWidth="75.0" text="Data" />
+               </columns>
+            </TableView>
+         </children>
+      </HBox>
+      <AnchorPane>
+         <children>
+            <Button mnemonicParsing="false" onAction="#onAddIssuesClick" text="Adicionar" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </AnchorPane>
+   </children>
+</VBox>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.IssueController">
+       <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+          <children>
+             <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+                <children>
+                   <Label layoutY="1.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Titulo" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                      <font>
+                         <Font name="System Bold" size="16.0" />
+                      </font>
+                   </Label>
+                   <TextField fx:id="title" alignment="TOP_LEFT" disable="true" layoutY="27.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                   <Label layoutY="50.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Descrição" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                      <font>
+                         <Font name="System Bold" size="16.0" />
+                      </font>
+                   </Label>
+                   <TextArea fx:id="description" disable="true" layoutY="75.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" wrapText="true" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                </children>
+             </AnchorPane>
+             <SplitPane dividerPositions="0.5" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+               <items>
+                   <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+                      <padding>
+                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                      </padding>
+                      <children>
+                         <GridPane layoutY="35.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <columnConstraints>
+                             <ColumnConstraints hgrow="SOMETIMES" maxWidth="112.0" minWidth="79.0" prefWidth="84.0" />
+                             <ColumnConstraints hgrow="SOMETIMES" maxWidth="177.0" minWidth="10.0" prefWidth="172.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                             <RowConstraints vgrow="SOMETIMES" />
+                             <RowConstraints vgrow="SOMETIMES" />
+                             <RowConstraints vgrow="SOMETIMES" />
+                               <RowConstraints vgrow="SOMETIMES" />
+                               <RowConstraints vgrow="SOMETIMES" />
+                               <RowConstraints vgrow="SOMETIMES" />
+                           </rowConstraints>
+                            <children>
+                               <Label text="Destrito:" GridPane.rowIndex="4" />
+                               <Label text="Rua:" GridPane.rowIndex="1" />
+                               <Label text="Freguesia:" GridPane.rowIndex="2" />
+                               <Label layoutX="10.0" layoutY="69.0" text="Concelho:" GridPane.rowIndex="3" />
+                               <Label layoutX="10.0" layoutY="169.0" text="Morada">
+                                  <font>
+                                     <Font size="18.0" />
+                                  </font>
+                               </Label>
+                               <Label layoutX="10.0" layoutY="159.0" text="Código Postal:" GridPane.rowIndex="5" />
+                               <Label fx:id="rua" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                               <Label fx:id="freg" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                               <Label fx:id="conc" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                               <Label fx:id="dist" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                               <Label fx:id="cp" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                            </children>
+                         </GridPane>
+                      </children>
+                   </AnchorPane>
+                   <HBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+                      <children>
+                         <ImageView fx:id="image" fitHeight="228.0" fitWidth="293.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="ALWAYS">
+                            <HBox.margin>
+                               <Insets />
+                            </HBox.margin>
+                            <cursor>
+                               <Cursor fx:constant="DEFAULT" />
+                            </cursor>
+                     </ImageView>
+                      </children>
+                   </HBox>
+               </items>
+                <VBox.margin>
+                   <Insets top="10.0" />
+                </VBox.margin>
+             </SplitPane>
+             <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+                <ButtonBar buttonMinWidth="0.0" layoutX="275.0" layoutY="16.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                   <buttons>
+                      <Button fx:id="cancel" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onAction="#onCancelClick" text="Recusar" ButtonBar.buttonData="LEFT" />
+                      <Button fx:id="next" graphicTextGap="1.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onAction="#onNextClick" prefHeight="25.0" prefWidth="134.0" text="Confirmar" ButtonBar.buttonData="RIGHT" />
+                      <Button fx:id="edit" layoutX="10.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onAction="#onEditClick" text="Editar" />
+                   </buttons>
+                   <padding>
+                      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                   </padding>
+                </ButtonBar>
+                <opaqueInsets>
+                   <Insets top="10.0" />
+                </opaqueInsets>
+             </AnchorPane>
+          </children>
+       </VBox>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</AnchorPane>
